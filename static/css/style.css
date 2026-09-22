@@ -1,0 +1,769 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1f2937;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+.start-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background: #374151;
+}
+
+.cv-page {
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.cv-form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.cv-form-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.page-description {
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+.cv-form-container h2 {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.cv-form-container label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+    margin-top: 18px;
+}
+
+.cv-form-container input,
+.cv-form-container textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.cv-form-container input:focus,
+.cv-form-container textarea:focus {
+    border-color: #111827;
+}
+
+.cv-form-container textarea {
+    resize: vertical;
+}
+
+.cv-form-container .start-button {
+    margin-top: 35px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .cv-page {
+        padding: 20px 12px;
+    }
+
+    .cv-form-container {
+        padding: 25px 20px;
+    }
+
+    .cv-form-container h1 {
+        font-size: 28px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+}
+.cv-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.cv-form-container {
+    width: 100%;
+    max-width: none;
+}
+
+.cv-preview-container {
+    position: sticky;
+    top: 30px;
+}
+
+.cv-preview {
+    background: white;
+    min-height: 800px;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.cv-preview h2 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    border: none;
+}
+
+.cv-preview p {
+    color: #6b7280;
+}
+
+@media (max-width: 900px) {
+    .cv-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-preview-container {
+        position: static;
+    }
+}
+
+.modern-cv {
+    background: white;
+    min-height: 1100px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    color: #1f2937;
+}
+
+.modern-header {
+    background: #111827;
+    color: white;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.modern-header h1 {
+    font-size: 38px;
+    margin: 0 0 8px 0;
+}
+
+.modern-header p {
+    margin: 0;
+    font-size: 17px;
+    color: #d1d5db;
+}
+
+.modern-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+    font-size: 14px;
+    color: #e5e7eb;
+}
+
+.modern-body {
+    padding: 40px 45px;
+}
+
+.modern-body section {
+    margin-bottom: 32px;
+}
+
+.modern-body section h2 {
+    font-size: 18px;
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #111827;
+}
+
+.modern-body p {
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.cv-item {
+    margin-bottom: 20px;
+}
+
+.cv-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 17px;
+}
+
+.cv-company {
+    font-weight: 600;
+}
+
+.cv-date {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+    .modern-header {
+        flex-direction: column;
+    }
+
+    .modern-contact {
+        text-align: left;
+    }
+
+    .modern-body {
+        padding: 30px;
+    }
+
+}
+#foto {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #f9fafb;
+}
+
+.photo-preview {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+    margin-bottom: 15px;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.modern-header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .modern-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.pdf-button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #111827;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pdf-button:hover {
+    background: #374151;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .modern-cv,
+    .modern-cv * {
+        visibility: visible;
+    }
+
+    .modern-cv {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .pdf-button {
+        display: none;
+    }
+}
+
+.template-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.template-btn {
+    padding: 10px 8px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.template-btn:hover {
+    background: #f3f4f6;
+}
+
+.template-btn.active {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+@media (max-width: 600px) {
+    .template-selector {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ================================
+   CV ŞABLONLARI
+   ================================ */
+
+/* MODERN */
+.modern-cv.template-modern {
+    border-radius: 4px;
+}
+
+.modern-cv.template-modern .modern-header {
+    background: #111827;
+}
+
+/* MINIMAL */
+.modern-cv.template-minimal {
+    border-radius: 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.modern-cv.template-minimal .modern-header {
+    background: white;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modern-cv.template-minimal .modern-header h1 {
+    color: #111827;
+}
+
+.modern-cv.template-minimal .modern-header p {
+    color: #6b7280;
+}
+
+.modern-cv.template-minimal .modern-contact {
+    color: #6b7280;
+}
+
+.modern-cv.template-minimal .modern-body section h2 {
+    color: #111827;
+    border-bottom: 1px solid #d1d5db;
+}
+
+/* PROFESYONEL */
+.modern-cv.template-professional {
+    border-radius: 0;
+}
+
+.modern-cv.template-professional .modern-header {
+    background: #1f2937;
+    padding: 35px 40px;
+    border-left: 8px solid #111827;
+}
+
+.modern-cv.template-professional .modern-header h1 {
+    font-size: 34px;
+    letter-spacing: 0.5px;
+}
+
+.modern-cv.template-professional .modern-body {
+    padding: 35px 40px;
+}
+
+.modern-cv.template-professional .modern-body section h2 {
+    color: #111827;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #111827;
+}
+
+.modern-cv.template-professional .cv-item {
+    margin-bottom: 18px;
+}
+
+/* KLASİK */
+.modern-cv.template-classic {
+    border-radius: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.modern-cv.template-classic .modern-header {
+    background: white;
+    color: #111827;
+    display: block;
+    text-align: center;
+    border-bottom: 3px double #111827;
+    padding: 35px;
+}
+
+.modern-cv.template-classic .modern-header-content {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modern-cv.template-classic .modern-header h1 {
+    color: #111827;
+    font-family: Georgia, serif;
+    font-size: 36px;
+}
+
+.modern-cv.template-classic .modern-header p {
+    color: #4b5563;
+}
+
+.modern-cv.template-classic .modern-contact {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    color: #4b5563;
+}
+
+.modern-cv.template-classic .modern-body {
+    padding: 40px 50px;
+}
+
+.modern-cv.template-classic .modern-body section h2 {
+    font-family: Georgia, serif;
+    border-bottom: 1px solid #111827;
+    font-size: 19px;
+}
+
+
+/* ================================
+   MOBİL CV TASARIMI
+   ================================ */
+
+@media (max-width: 900px) {
+
+    .cv-page {
+        padding: 20px 12px;
+    }
+
+    .cv-layout {
+        display: block;
+        width: 100%;
+    }
+
+    .cv-form-container {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .cv-preview-container {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .template-selector {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .template-btn {
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    .pdf-button {
+        min-height: 48px;
+        font-size: 15px;
+    }
+
+    .modern-cv {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .modern-header {
+        padding: 30px 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .modern-header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modern-header h1 {
+        font-size: 30px;
+        word-break: break-word;
+    }
+
+    .modern-header p {
+        font-size: 15px;
+    }
+
+    .modern-contact {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        font-size: 13px;
+    }
+
+    .modern-body {
+        padding: 30px 25px;
+    }
+
+    .modern-body section {
+        margin-bottom: 25px;
+    }
+
+    .modern-body section h2 {
+        font-size: 17px;
+    }
+
+    .cv-item h3 {
+        font-size: 16px;
+    }
+
+    .cv-form-container input,
+    .cv-form-container textarea {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .photo-preview {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cv-page {
+        padding: 10px 8px;
+    }
+
+    .cv-form-container {
+        padding: 22px 16px;
+    }
+
+    .cv-form-container h1 {
+        font-size: 27px;
+    }
+
+    .page-description {
+        font-size: 14px;
+    }
+
+    .cv-form-container h2 {
+        font-size: 20px;
+    }
+
+    .template-selector {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .template-btn {
+        font-size: 13px;
+        padding: 10px 5px;
+    }
+
+    .modern-header {
+        padding: 25px 18px;
+    }
+
+    .modern-header h1 {
+        font-size: 26px;
+    }
+
+    .modern-body {
+        padding: 25px 18px;
+    }
+
+    .modern-contact {
+        font-size: 12px;
+    }
+
+    .pdf-button {
+        font-size: 14px;
+        padding: 13px;
+    }
+}
+
+
+/* EFE KAAN AVCI MESAJ KUTUSU */
+
+.message-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(17, 24, 39, 0.35);
+}
+
+.message-box {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 30px 28px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    text-align: center;
+}
+
+.message-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.message-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.message-box h2 {
+    margin: 0 0 18px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.message-box p {
+    margin: 0 0 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.message-box .special-message {
+    margin-top: 18px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.message-box .thanks {
+    margin-top: 18px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.message-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #111827;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .message-overlay {
+        padding: 16px;
+    }
+
+    .message-box {
+        max-width: 360px;
+        padding: 26px 20px;
+    }
+
+    .message-box h2 {
+        font-size: 21px;
+    }
+
+    .message-box p {
+        font-size: 14px;
+    }
+}
+

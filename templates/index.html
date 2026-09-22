@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EKA BEDAVA CV</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <main class="hero">
+
+        <div class="hero-content">
+
+            <div class="logo">
+                EKA BEDAVA CV
+            </div>
+
+            <h1>
+                Ücretsiz CV'ni<br>
+                Dakikalar İçinde Oluştur
+            </h1>
+
+            <p>
+                Profesyonel CV'ni kolayca oluştur,
+                düzenle ve PDF olarak indir.
+            </p>
+
+            <a href="/cv-olustur" class="start-button">
+                CV OLUŞTURMAYA BAŞLA
+            </a>
+
+        </div>
+
+    </main>
+
+    
+    <div class="message-overlay" id="messageOverlay">
+
+        <div class="message-box">
+
+            <button class="message-close" onclick="kapatMesaj()">
+                ×
+            </button>
+
+            <div class="message-icon">❤️</div>
+
+            <h2>EKA BEDAVA CV</h2>
+
+            <p>
+                Ben <strong>EFE KAAN AVCI</strong>.
+            </p>
+
+            <p>
+                Bu siteyi, ücretli CV siteleri arasından
+                herkesin ücretsiz bir şekilde CV oluşturabilmesi için,
+                sizi düşünerek yaptım.
+            </p>
+
+            <p class="special-message">
+                Sizden tek bir ricam var:
+            </p>
+
+            <p>
+                <strong>Ece</strong> adında çok sevdiğim bir kız var.
+                Onun geleceği için bir dua etmeniz benim için yeterli.
+            </p>
+
+            <p class="thanks">
+                Desteğiniz için teşekkür ederim. ❤️
+            </p>
+
+            <button class="message-button" onclick="kapatMesaj()">
+                Siteye Devam Et
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+    function kapatMesaj() {
+        document.getElementById("messageOverlay").style.display = "none";
+    }
+    </script>
+</body>
+</html>
+

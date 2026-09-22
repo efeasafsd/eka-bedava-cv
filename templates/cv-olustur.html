@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Oluştur | EKA BEDAVA CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<main class="cv-page">
+
+    <div class="cv-layout">
+
+        <!-- FORM -->
+        <div class="cv-form-container">
+
+            <h1>CV'ni Oluştur</h1>
+
+            <p class="page-description">
+                Bilgilerini doldur, CV'n sağ tarafta anında güncellensin.
+            </p>
+
+            <form onsubmit="return false;">
+
+                <h2>Kişisel Bilgiler</h2>
+
+<label>Profil Fotoğrafı</label>
+<input type="file" id="foto" accept="image/*">
+
+                <label>Ad Soyad</label>
+                <input type="text" id="adSoyad" placeholder="Örn: Ahmet Yılmaz">
+
+                <label>E-posta</label>
+                <input type="email" id="email" placeholder="ornek@email.com">
+
+                <label>Telefon</label>
+                <input type="tel" id="telefon" placeholder="05XX XXX XX XX">
+
+                <label>Şehir</label>
+                <input type="text" id="sehir" placeholder="İstanbul">
+
+                <label>Hakkımda</label>
+                <textarea id="hakkimda" rows="5" placeholder="Kendinizden kısaca bahsedin..."></textarea>
+
+                <h2>Eğitim</h2>
+
+                <label>Okul / Üniversite</label>
+                <input type="text" id="okul" placeholder="Okul adı">
+
+                <label>Bölüm</label>
+                <input type="text" id="bolum" placeholder="Bölüm">
+
+                <label>Mezuniyet Yılı</label>
+                <input type="text" id="mezuniyet" placeholder="2026">
+
+                <h2>İş Deneyimi</h2>
+
+                <label>Pozisyon</label>
+                <input type="text" id="pozisyon" placeholder="Örn: Yazılım Geliştirici">
+
+                <label>Şirket</label>
+                <input type="text" id="sirket" placeholder="Şirket adı">
+
+                <label>Çalışma Dönemi</label>
+                <input type="text" id="donem" placeholder="2024 - 2026">
+
+                <label>Görevler ve Sorumluluklar</label>
+                <textarea id="gorevler" rows="5" placeholder="Yaptığınız işleri açıklayın..."></textarea>
+
+                <h2>Yetenekler</h2>
+
+                <label>Yetenekler</label>
+                <input type="text" id="yetenekler" placeholder="Python, Excel, Photoshop">
+
+                <h2>Yabancı Dil</h2>
+
+                <label>Dil</label>
+                <input type="text" id="dil" placeholder="İngilizce - B2">
+
+                <h2>Bağlantılar</h2>
+
+                <label>LinkedIn</label>
+                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/...">
+
+                <label>GitHub / Portföy</label>
+                <input type="url" id="github" placeholder="https://github.com/...">
+
+            </form>
+
+        </div>
+
+        <!-- CV ÖNİZLEME -->
+        <div class="cv-preview-container">
+
+                <div class="template-selector">
+                    <button type="button" class="template-btn active" data-template="modern">Modern</button>
+                    <button type="button" class="template-btn" data-template="minimal">Minimal</button>
+                    <button type="button" class="template-btn" data-template="professional">Profesyonel</button>
+                    <button type="button" class="template-btn" data-template="classic">Klasik</button>
+                </div>
+
+                <button type="button" id="pdfButton" class="pdf-button">
+                    CV'Yİ PDF OLARAK İNDİR
+                </button>
+
+            <div class="modern-cv">
+
+                <header class="modern-header">
+
+                    <div>
+                        <img id="previewFoto" class="photo-preview" alt="Profil Fotoğrafı"><h1 id="previewAdSoyad">Ad Soyad</h1>
+
+                        <p id="previewPozisyon">
+                            Profesyonel Pozisyon
+                        </p>
+                    </div>
+
+                    <div class="modern-contact">
+
+                        <span id="previewEmail">
+                            E-posta
+                        </span>
+
+                        <span id="previewTelefon">
+                            Telefon
+                        </span>
+
+                        <span id="previewSehir">
+                            Şehir
+                        </span>
+
+                    </div>
+
+                </header>
+
+                <div class="modern-body">
+
+                    <section>
+                        <h2>Hakkımda</h2>
+                        <p id="previewHakkimda">
+                            Kendiniz hakkında kısa bir açıklama burada görünecek.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>İş Deneyimi</h2>
+
+                        <div class="cv-item">
+
+                            <h3 id="previewPozisyon2">
+                                Pozisyon
+                            </h3>
+
+                            <p class="cv-company" id="previewSirket">
+                                Şirket
+                            </p>
+
+                            <p class="cv-date" id="previewDonem">
+                                Çalışma Dönemi
+                            </p>
+
+                            <p id="previewGorevler">
+                                Görevler ve sorumluluklar burada görünecek.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <h2>Eğitim</h2>
+
+                        <div class="cv-item">
+
+                            <h3 id="previewOkul">
+                                Okul / Üniversite
+                            </h3>
+
+                            <p id="previewBolum">
+                                Bölüm
+                            </p>
+
+                            <p class="cv-date" id="previewMezuniyet">
+                                Mezuniyet Yılı
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <h2>Yetenekler</h2>
+
+                        <p id="previewYetenekler">
+                            Yetenekler
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <h2>Yabancı Dil</h2>
+
+                        <p id="previewDil">
+                            Dil
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <h2>Bağlantılar</h2>
+
+                        <p id="previewLinkedin">
+                            LinkedIn
+                        </p>
+
+                        <p id="previewGithub">
+                            GitHub / Portföy
+                        </p>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+
+const alanlar = [
+    ["adSoyad", "previewAdSoyad", "Ad Soyad"],
+    ["email", "previewEmail", "E-posta"],
+    ["telefon", "previewTelefon", "Telefon"],
+    ["sehir", "previewSehir", "Şehir"],
+    ["hakkimda", "previewHakkimda", "Kendiniz hakkında kısa bir açıklama burada görünecek."],
+    ["pozisyon", "previewPozisyon", "Profesyonel Pozisyon"],
+    ["pozisyon", "previewPozisyon2", "Pozisyon"],
+    ["sirket", "previewSirket", "Şirket"],
+    ["donem", "previewDonem", "Çalışma Dönemi"],
+    ["gorevler", "previewGorevler", "Görevler ve sorumluluklar burada görünecek."],
+    ["okul", "previewOkul", "Okul / Üniversite"],
+    ["bolum", "previewBolum", "Bölüm"],
+    ["mezuniyet", "previewMezuniyet", "Mezuniyet Yılı"],
+    ["yetenekler", "previewYetenekler", "Yetenekler"],
+    ["dil", "previewDil", "Dil"],
+    ["linkedin", "previewLinkedin", "LinkedIn"],
+    ["github", "previewGithub", "GitHub / Portföy"]
+];
+
+alanlar.forEach(function(alan) {
+
+    const input = document.getElementById(alan[0]);
+    const preview = document.getElementById(alan[1]);
+    const varsayilan = alan[2];
+
+    input.addEventListener("input", function() {
+        preview.textContent = this.value || varsayilan;
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+<script>
+const fotoInput = document.getElementById("foto");
+const previewFoto = document.getElementById("previewFoto");
+
+fotoInput.addEventListener("change", function(event) {
+
+    const dosya = event.target.files[0];
+
+    if (!dosya) {
+        previewFoto.style.display = "none";
+        previewFoto.src = "";
+        return;
+    }
+
+    const okuyucu = new FileReader();
+
+    okuyucu.onload = function(e) {
+        previewFoto.src = e.target.result;
+        previewFoto.style.display = "block";
+    };
+
+    okuyucu.readAsDataURL(dosya);
+
+});
+</script>
+
+
+<script>
+document.getElementById("pdfButton").addEventListener("click", function() {
+    window.print();
+});
+</script>
+
+
+<script>
+const templateButtons = document.querySelectorAll(".template-btn");
+const modernCv = document.querySelector(".modern-cv");
+
+templateButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        templateButtons.forEach(function(btn) {
+            btn.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        const template = this.getAttribute("data-template");
+
+        modernCv.classList.remove(
+            "template-modern",
+            "template-minimal",
+            "template-professional",
+            "template-classic"
+        );
+
+        modernCv.classList.add("template-" + template);
+    });
+
+});
+</script>
+

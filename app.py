@@ -17,6 +17,17 @@ def google_verification():
         mimetype="text/plain"
     )
 
+@app.route("/robots.txt")
+def robots():
+    return Response(
+        """User-agent: *
+Allow: /
+
+Sitemap: https://eka-bedava-cv.onrender.com/sitemap.xml
+""",
+        mimetype="text/plain"
+    )
+
 @app.route("/sitemap.xml")
 def sitemap():
     return Response(
@@ -34,3 +45,4 @@ def sitemap():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+

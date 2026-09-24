@@ -20,7 +20,10 @@ def google_verification():
 @app.route("/robots.txt")
 def robots():
     return Response(
-        """User-agent: *
+        """User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: *
 Allow: /
 
 Sitemap: https://eka-bedava-cv.onrender.com/sitemap.xml
@@ -45,4 +48,5 @@ def sitemap():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
 
